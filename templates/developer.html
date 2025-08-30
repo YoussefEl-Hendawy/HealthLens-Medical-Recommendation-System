@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer - Youssef El-Hendawy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #34495e;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #16a085;
+            margin-top: 0;
+        }
+
+        .collapsible {
+            background-color: #16a085;
+            color: white;
+            cursor: pointer;
+            padding: 12px 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .active,
+        .collapsible:hover {
+            background-color: #138f75;
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.25s ease-out;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .content p,
+        .content ul {
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+
+        a {
+            color: #16a085;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Youssef El-Hendawy</h1>
+    </header>
+
+    <main>
+
+        <section>
+            <button class="collapsible">About Me</button>
+            <div class="content">
+                <p>
+                    I am a Computer Engineering student with a passion for software development and a strong foundation
+                    in machine learning, data analytics, and data science. My technical journey began early through
+                    embedded systems projects in high school, which built my curiosity for problem-solving and
+                    innovation in technology.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <button class="collapsible">Education</button>
+            <div class="content">
+                <ul>
+                    <li>Currently, Bachelor's in Computer Engineering in EUI, pursuing studies while actively engaging
+                        in software and ML projects.</li>
+                    <li>STEM graduate from Ismailia STEM High School</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <button class="collapsible">Current Focus</button>
+            <div class="content">
+                <ul>
+                    <li>AI, Machine Learning, Deep Learning, and Data Science project scope</li>
+                    <li>Improving technical and leadership skills simultaneously</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <button class="collapsible">Contact</button>
+            <div class="content">
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/youssef-el-hendawy-7012b4325"
+                        target="_blank">www.linkedin.com/in/youssef-el-hendawy-7012b4325</a></p>
+                <p>Email: yousseftarekelhendawy@gmail.com</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Youssef El-Hendawy | HealthLens System</p>
+    </footer>
+
+    <script>
+        const coll = document.getElementsByClassName("collapsible");
+        for (let i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                const content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
